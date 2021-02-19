@@ -1,0 +1,96 @@
+/* screen - stroke-99-dp */
+
+.border-1px-silver-chalice {
+  border: 1px solid var(--silver-chalice);
+}
+.border-2px-mine-shaft {
+  border: 2px solid var(--mine-shaft);
+}
+.inter-black-outer-space-64px {
+  color: var(--outer-space);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 900;
+}
+.inter-bold-dandelion-18px {
+  color: var(--dandelion);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+}
+.inter-bold-outer-space-24px {
+  color: var(--outer-space);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.inter-bold-silver-chalice-12px {
+  color: var(--silver-chalice);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+}
+.inter-bold-white-14-3px {
+  color: var(--white);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 14.3px;
+  font-style: normal;
+  font-weight: 700;
+}
+.inter-bold-white-24px {
+  color: var(--white);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.inter-normal-blue-marguerite-14px {
+  color: var(--blue-marguerite);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.inter-normal-outer-space-14px {
+  color: var(--outer-space);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.inter-normal-outer-space-18px {
+  color: var(--outer-space);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.inter-normal-silver-chalice-18px {
+  color: var(--silver-chalice);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.stroke-99-dp {
+  background-color: transparent;
+  height: 64px;
+  overflow-x: hidden;
+  position: relative;
+  width: 98px;
+}
+:root {
+  --blue-marguerite: rgba(108,92,231,1.0);
+  --chicago: rgba(91,91,91,1.0);
+  --copper: rgba(222,144,111,1.0);
+  --dandelion: rgba(253,203,110,1.0);
+  --mine-shaft: rgba(51,51,51,1.0);
+  --outer-space: rgba(45,52,54,1.0);
+  --silver: rgba(193,193,193,1.0);
+  --silver-chalice: rgba(173,173,173,1.0);
+  --white: rgba(255,255,255,1.0);
+}

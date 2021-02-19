@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1440, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="css/blog.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Inter:400,900,700");
+
+      .component-wrapper a,
+      .screen a {
+        text-decoration: none;
+        display: contents;
+      }
+
+      .full-width-a {
+        width: 100%;
+      }
+
+      .full-height-a {
+        height: 100%;
+      }
+
+      .screen textarea:focus,
+      .screen input:focus {
+        outline: none;
+      }
+
+      .screen *,
+      .component-wrapper * {
+        box-sizing: border-box;
+      }
+
+      .screen div {
+        -webkit-text-size-adjust: none;
+      }
+
+      .container-center-vertical,
+      .container-center-horizontal {
+        pointer-events: none;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+      }
+
+      .container-center-vertical {
+        align-items: center;
+        height: 100%;
+      }
+
+      .container-center-horizontal {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .container-center-vertical > *,
+      .container-center-horizontal > * {
+        pointer-events: auto;
+        flex-shrink: 0;
+      }
+
+      .component-wrapper,
+      .screen {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-all;
+        word-break: break-word;
+      }
+
+      .auto-animated div {
+        opacity: 0;
+        position: absolute;
+        --z-index: -1;
+      }
+
+      .auto-animated .container-center-vertical,
+      .auto-animated .container-center-horizontal {
+        opacity: 1;
+      }
+
+      .overlay {
+        position: absolute;
+        opacity: 0;
+        display: none;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+      }
+
+      .animate-appear {
+        opacity: 0;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 normal forwards;
+      }
+
+      .animate-disappear {
+        opacity: 1;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 reverse forwards;
+      }
+
+      .animate-nodelay {
+        animation-delay: 0s;
+      }
+
+      @keyframes reveal {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .align-self-flex-start {
+        align-self: flex-start;
+      }
+      .align-self-flex-end {
+        align-self: flex-end;
+      }
+      .align-self-flex-center {
+        align-self: center;
+      }
+      .valign-text-middle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .valign-text-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      input:focus {
+        outline: none;
+      }
+      .component-wrapper,
+      .component-wrapper * {
+        pointer-events: none;
+      }
+
+      .component-wrapper a *,
+      .component-wrapper a,
+      .component-wrapper input,
+      .component-wrapper video,
+      .component-wrapper iframe,
+      .listeners-active,
+      .listeners-active * {
+        pointer-events: auto;
+      }
+
+      .hidden,
+      .hidden * {
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .smart-layers-pointers,
+      .smart-layers-pointers * {
+        pointer-events: auto;
+        visibility: visible;
+      }
+
+      .component-wrapper.not-ready,
+      .component-wrapper.not-ready * {
+        visibility: hidden !important;
+      }
+
+      .listeners-active-click,
+      .listeners-active-click * {
+        cursor: pointer;
+      }
+    </style>
+    <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+  </head>
+  <body style="margin: 0; background: rgba(255, 255, 255, 1)">
+    <input type="hidden" id="anPageName" name="page" value="blog" />
+    <div class="container-center-horizontal">
+      <div class="blog screen">
+        <div class="x-blocks-7-C61RwL">
+          <img class="wave-iN1Y9x" src="img/wave@1x.svg" />
+          <div class="with-form-iN1Y9x">
+            <div class="inpit-r-lgGuhs">
+              <div class="x-background-16-dp-x5XmCn"></div>
+              <div class="your-name-x5XmCn valign-text-middle inter-normal-outer-space-18px">Your name</div>
+              <div class="icon-user-x5XmCn">
+                <img class="vector-NVrovA" src="img/vector@2x.svg" />
+                <img class="vector-36S2Jy" src="img/vector-1@2x.svg" />
+              </div>
+            </div>
+            <div class="textfield-lgGuhs">
+              <div class="x-background-16-dp-Vpexvy">
+                <div class="bg-dkeNgb border-2px-mine-shaft"></div>
+              </div>
+              <div class="leave-your-message-Vpexvy">Leave your message|</div>
+              <div class="icon-edit-Vpexvy">
+                <img class="vector-OVXraZ" src="img/vector-2@2x.svg" />
+                <img class="vector-zOx7fl" src="img/vector-3@2x.svg" />
+              </div>
+            </div>
+            <div class="inpit-r-h08fFY">
+              <div class="x-background-16-dp-xOMmsN"></div>
+              <div class="e-mail-xOMmsN valign-text-middle inter-normal-outer-space-18px">E-mail</div>
+              <div class="icon-mail-xOMmsN">
+                <img class="vector-9vLtTH" src="img/vector-4@2x.svg" />
+                <img class="vector-aQ6dxj" src="img/vector-5@2x.svg" />
+              </div>
+            </div>
+            <div class="x-primary-lgGuhs">
+              <div class="x-background-16-dp-s41Ybj"></div>
+              <div class="send-s41Ybj valign-text-middle inter-bold-white-24px">SEND</div>
+            </div>
+            <div class="information-lgGuhs valign-text-middle inter-bold-silver-chalice-12px">INFORMATION</div>
+            <div class="have-questions-lgGuhs valign-text-middle inter-bold-silver-chalice-12px">HAVE QUESTIONS</div>
+            <div class="about-fapster-app-lgGuhs valign-text-middle inter-normal-outer-space-14px">
+              About Fapster app
+            </div>
+            <div class="get-in-touch-lgGuhs valign-text-middle inter-normal-outer-space-14px">Get in Touch</div>
+            <div class="things-we-like-lgGuhs valign-text-middle inter-normal-outer-space-14px">Things We Like</div>
+            <div class="onhovered-active-lgGuhs valign-text-middle inter-normal-outer-space-14px">
+              Onhovered / Active
+            </div>
+            <div class="privacy-policy-lgGuhs valign-text-middle inter-normal-outer-space-14px">Privacy Policy</div>
+            <div class="terms-of-service-lgGuhs valign-text-middle inter-normal-outer-space-14px">Terms of Service</div>
+            <div class="we-are-hiring-lgGuhs valign-text-middle inter-normal-outer-space-14px">We are hiring!</div>
+            <div class="resources-lgGuhs valign-text-middle inter-normal-outer-space-14px">Resources</div>
+          </div>
+        </div>
+        <img class="line-5-C61RwL" src="img/line-5-1@1x.svg" />
+        <div class="header-C61RwL">
+          <img class="x-background-0-dp-IcPKRJ" src="img/--background---0-dp@1x.svg" />
+          <div class="x01-images-avatar-IcPKRJ"><img class="intersect-bo16s2" src="img/intersect@2x.svg" /></div>
+          <div class="horizontal-3-IcPKRJ"><div class="hs-plnt-helper-lZZrvT">HsPlntHelper</div></div>
+          <div class="x-primary-IcPKRJ">
+            <div class="x-background-99-dp-3NsCxO"></div>
+            <div class="sign-in-3NsCxO valign-text-middle inter-bold-white-14-3px">Sign In</div>
+          </div>
+          <div class="x-primary-wRlxz0">
+            <div class="x-background-99-dp-N4x1pJ"></div>
+            <div class="sign-in-N4x1pJ valign-text-middle inter-bold-white-14-3px">Log In</div>
+          </div>
+          <div class="x-ghost-IcPKRJ">
+            <a href="home.html"
+              ><div class="how-it-works-Yv69kB valign-text-middle inter-normal-silver-chalice-18px">Home</div></a
+            >
+          </div>
+          <div class="textlabel-IcPKRJ valign-text-middle inter-bold-dandelion-18px">•</div>
+          <div class="textlabel-wRlxz0 valign-text-middle inter-bold-dandelion-18px">•</div>
+          <a href="blog.html">
+            <div class="x-ghost-wRlxz0"><div class="who-we-are-1d36Fs valign-text-middle">Blog</div></div></a
+          >
+          <a href="connect.html">
+            <div class="x-ghost-94d7NV">
+              <div class="what-we-do-3pm1Es valign-text-middle inter-normal-silver-chalice-18px">Connect</div>
+            </div></a
+          >
+        </div>
+        <div class="x-background-99-dp-C61RwL"></div>
+        <div class="x-background-99-dp-VMr6Om"></div>
+        <div class="thirsty-plants-C61RwL valign-text-middle inter-black-outer-space-64px">Thirsty plants.</div>
+        <div class="plants-tha-love-shade-C61RwL valign-text-middle inter-black-outer-space-64px">
+          Plants that love shade.
+        </div>
+        <div class="discover-p-e-to-drink-C61RwL valign-text-middle">
+          Discover plants that can live in water + love to drink!
+        </div>
+        <div class="have-a-dar-t-for-that-C61RwL valign-text-middle">
+          Have a dark apartment/ space? No problem, these are the best for that.
+        </div>
+        <div class="card-3-C61RwL">
+          <div class="x-simple-En5r8E"></div>
+          <div class="reusable-c-ery-layout-En5r8E valign-text-middle inter-bold-outer-space-24px">
+            Reusable components available for every layout
+          </div>
+          <div class="let-me-exp-ntextually-En5r8E valign-text-middle inter-normal-outer-space-18px">
+            Let me explain the meaning reusable component as I feel it contextually.
+          </div>
+          <div class="icon-arrow-right-En5r8E">
+            <img class="vector-1IfY0H" src="img/vector-24@2x.svg" />
+            <img class="vector-ktxhwI" src="img/vector-7@2x.svg" />
+          </div>
+          <div class="x-ghost-En5r8E">
+            <div class="x-stroke-16-dp-rP4PE1 border-1px-silver-chalice"></div>
+            <div class="read-more-rP4PE1 valign-text-middle inter-normal-blue-marguerite-14px">Read more</div>
+          </div>
+        </div>
+        <div class="card-9-C61RwL">
+          <div class="x-simple-W61qV8"></div>
+          <div class="reusable-c-ery-layout-W61qV8 valign-text-middle inter-bold-outer-space-24px">
+            Reusable components available for every layout
+          </div>
+          <div class="let-me-exp-ntextually-W61qV8 valign-text-middle inter-normal-outer-space-18px">
+            Let me explain the meaning reusable component as I feel it contextually.
+          </div>
+          <div class="icon-arrow-right-W61qV8">
+            <img class="vector-qXUX1V" src="img/vector-26@2x.svg" />
+            <img class="vector-FwOA7o" src="img/vector-27@2x.svg" />
+          </div>
+          <div class="x-ghost-W61qV8">
+            <div class="x-stroke-16-dp-rfoBk4 border-1px-silver-chalice"></div>
+            <div class="read-more-rfoBk4 valign-text-middle inter-normal-blue-marguerite-14px">Read more</div>
+          </div>
+        </div>
+        <div class="card-6-C61RwL">
+          <div class="x-simple-GzWPqN"></div>
+          <div class="reusable-c-ery-layout-GzWPqN valign-text-middle inter-bold-outer-space-24px">
+            Reusable components available for every layout
+          </div>
+          <div class="let-me-exp-ntextually-GzWPqN valign-text-middle inter-normal-outer-space-18px">
+            Let me explain the meaning reusable component as I feel it contextually.
+          </div>
+          <div class="icon-arrow-right-GzWPqN">
+            <img class="vector-ndMhxo" src="img/vector-24@2x.svg" />
+            <img class="vector-As9GPV" src="img/vector-7@2x.svg" />
+          </div>
+          <div class="x-ghost-GzWPqN">
+            <div class="x-stroke-16-dp-avxL86 border-1px-silver-chalice"></div>
+            <div class="read-more-avxL86 valign-text-middle inter-normal-blue-marguerite-14px">Read more</div>
+          </div>
+        </div>
+        <div class="card-10-C61RwL">
+          <div class="x-simple-Au5E6v"></div>
+          <div class="reusable-c-ery-layout-Au5E6v valign-text-middle inter-bold-outer-space-24px">
+            Reusable components available for every layout
+          </div>
+          <div class="let-me-exp-ntextually-Au5E6v valign-text-middle inter-normal-outer-space-18px">
+            Let me explain the meaning reusable component as I feel it contextually.
+          </div>
+          <div class="icon-arrow-right-Au5E6v">
+            <img class="vector-kq9ntr" src="img/vector-26@2x.svg" />
+            <img class="vector-uX2Gxs" src="img/vector-31@2x.svg" />
+          </div>
+          <div class="x-ghost-Au5E6v">
+            <div class="x-stroke-16-dp-8GItgE border-1px-silver-chalice"></div>
+            <div class="read-more-8GItgE valign-text-middle inter-normal-blue-marguerite-14px">Read more</div>
+          </div>
+        </div>
+        <div class="card-4-C61RwL">
+          <div class="x-simple-HWcGHq"></div>
+          <div class="reusable-c-ery-layout-HWcGHq valign-text-middle inter-bold-outer-space-24px">
+            Reusable components available for every layout
+          </div>
+          <div class="let-me-exp-ntextually-HWcGHq valign-text-middle inter-normal-outer-space-18px">
+            Let me explain the meaning reusable component as I feel it contextually.
+          </div>
+          <div class="icon-arrow-right-HWcGHq">
+            <img class="vector-urs0NJ" src="img/vector-32@2x.svg" />
+            <img class="vector-0QaoRf" src="img/vector-7@2x.svg" />
+          </div>
+          <div class="x-ghost-HWcGHq">
+            <div class="x-stroke-16-dp-e5FXJ3 border-1px-silver-chalice"></div>
+            <div class="read-more-e5FXJ3 valign-text-middle inter-normal-blue-marguerite-14px">Read more</div>
+          </div>
+        </div>
+        <div class="card-11-C61RwL">
+          <div class="x-simple-OVtxi7"></div>
+          <div class="reusable-c-ery-layout-OVtxi7 valign-text-middle inter-bold-outer-space-24px">
+            Reusable components available for every layout
+          </div>
+          <div class="let-me-exp-ntextually-OVtxi7 valign-text-middle inter-normal-outer-space-18px">
+            Let me explain the meaning reusable component as I feel it contextually.
+          </div>
+          <div class="icon-arrow-right-OVtxi7">
+            <img class="vector-iOB1kL" src="img/vector-34@2x.svg" />
+            <img class="vector-LU3BxF" src="img/vector-27@2x.svg" />
+          </div>
+          <div class="x-ghost-OVtxi7">
+            <div class="x-stroke-16-dp-HLuDFg border-1px-silver-chalice"></div>
+            <div class="read-more-HLuDFg valign-text-middle inter-normal-blue-marguerite-14px">Read more</div>
+          </div>
+        </div>
+        <div class="card-7-C61RwL">
+          <div class="x-simple-J9PwEA"></div>
+          <div class="reusable-c-ery-layout-J9PwEA valign-text-middle inter-bold-outer-space-24px">
+            Reusable components available for every layout
+          </div>
+          <div class="let-me-exp-ntextually-J9PwEA valign-text-middle inter-normal-outer-space-18px">
+            Let me explain the meaning reusable component as I feel it contextually.
+          </div>
+          <div class="icon-arrow-right-J9PwEA">
+            <img class="vector-lGpY4s" src="img/vector-32@2x.svg" />
+            <img class="vector-9Gv46K" src="img/vector-7@2x.svg" />
+          </div>
+          <div class="x-ghost-J9PwEA">
+            <div class="x-stroke-16-dp-ZE5TNt border-1px-silver-chalice"></div>
+            <div class="read-more-ZE5TNt valign-text-middle inter-normal-blue-marguerite-14px">Read more</div>
+          </div>
+        </div>
+        <div class="card-12-C61RwL">
+          <div class="x-simple-DxDX0z"></div>
+          <div class="reusable-c-ery-layout-DxDX0z valign-text-middle inter-bold-outer-space-24px">
+            Reusable components available for every layout
+          </div>
+          <div class="let-me-exp-ntextually-DxDX0z valign-text-middle inter-normal-outer-space-18px">
+            Let me explain the meaning reusable component as I feel it contextually.
+          </div>
+          <div class="icon-arrow-right-DxDX0z">
+            <img class="vector-fxRX6i" src="img/vector-34@2x.svg" />
+            <img class="vector-UrKnvH" src="img/vector-31@2x.svg" />
+          </div>
+          <div class="x-ghost-DxDX0z">
+            <div class="x-stroke-16-dp-ykCvQX border-1px-silver-chalice"></div>
+            <div class="read-more-ykCvQX valign-text-middle inter-normal-blue-marguerite-14px">Read more</div>
+          </div>
+        </div>
+        <div class="card-5-C61RwL">
+          <div class="x-simple-dmwEDh"></div>
+          <div class="reusable-c-ery-layout-dmwEDh valign-text-middle inter-bold-outer-space-24px">
+            Reusable components available for every layout
+          </div>
+          <div class="let-me-exp-ntextually-dmwEDh valign-text-middle inter-normal-outer-space-18px">
+            Let me explain the meaning reusable component as I feel it contextually.
+          </div>
+          <div class="icon-arrow-right-dmwEDh">
+            <img class="vector-w3QZso" src="img/vector-24@2x.svg" />
+            <img class="vector-ZCXpj9" src="img/vector-7@2x.svg" />
+          </div>
+          <div class="x-ghost-dmwEDh">
+            <div class="x-stroke-16-dp-CF2Ze4 border-1px-silver-chalice"></div>
+            <div class="read-more-CF2Ze4 valign-text-middle inter-normal-blue-marguerite-14px">Read more</div>
+          </div>
+        </div>
+        <div class="card-13-C61RwL">
+          <div class="x-simple-ShFLAz"></div>
+          <div class="reusable-c-ery-layout-ShFLAz valign-text-middle inter-bold-outer-space-24px">
+            Reusable components available for every layout
+          </div>
+          <div class="let-me-exp-ntextually-ShFLAz valign-text-middle inter-normal-outer-space-18px">
+            Let me explain the meaning reusable component as I feel it contextually.
+          </div>
+          <div class="icon-arrow-right-ShFLAz">
+            <img class="vector-Ce4tf5" src="img/vector-26@2x.svg" />
+            <img class="vector-XyxrIM" src="img/vector-27@2x.svg" />
+          </div>
+          <div class="x-ghost-ShFLAz">
+            <div class="x-stroke-16-dp-j4Npjc border-1px-silver-chalice"></div>
+            <div class="read-more-j4Npjc valign-text-middle inter-normal-blue-marguerite-14px">Read more</div>
+          </div>
+        </div>
+        <div class="card-8-C61RwL">
+          <div class="x-simple-G5lcgt"></div>
+          <div class="reusable-c-ery-layout-G5lcgt valign-text-middle inter-bold-outer-space-24px">
+            Reusable components available for every layout
+          </div>
+          <div class="let-me-exp-ntextually-G5lcgt valign-text-middle inter-normal-outer-space-18px">
+            Let me explain the meaning reusable component as I feel it contextually.
+          </div>
+          <div class="icon-arrow-right-G5lcgt">
+            <img class="vector-bunQTO" src="img/vector-24@2x.svg" />
+            <img class="vector-rMxncr" src="img/vector-7@2x.svg" />
+          </div>
+          <div class="x-ghost-G5lcgt">
+            <div class="x-stroke-16-dp-afd3XZ border-1px-silver-chalice"></div>
+            <div class="read-more-afd3XZ valign-text-middle inter-normal-blue-marguerite-14px">Read more</div>
+          </div>
+        </div>
+        <div class="card-14-C61RwL">
+          <div class="x-simple-Fq87Yl"></div>
+          <div class="reusable-c-ery-layout-Fq87Yl valign-text-middle inter-bold-outer-space-24px">
+            Reusable components available for every layout
+          </div>
+          <div class="let-me-exp-ntextually-Fq87Yl valign-text-middle inter-normal-outer-space-18px">
+            Let me explain the meaning reusable component as I feel it contextually.
+          </div>
+          <div class="icon-arrow-right-Fq87Yl">
+            <img class="vector-niOTGr" src="img/vector-26@2x.svg" />
+            <img class="vector-CxMI6Z" src="img/vector-31@2x.svg" />
+          </div>
+          <div class="x-ghost-Fq87Yl">
+            <div class="x-stroke-16-dp-8FoPjv border-1px-silver-chalice"></div>
+            <div class="read-more-8FoPjv valign-text-middle inter-normal-blue-marguerite-14px">Read more</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
